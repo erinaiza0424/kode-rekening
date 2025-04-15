@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Kode Rekening</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aplikasi Pencarian Kode Rekening</h1>
+            <p>Referensi Kode Rekening Belanja Manajemen Aplikasi RKAS</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari kode rekening atau deskripsi...">
+                <button id="searchButton">Cari</button>
+            </div>
+            <div class="filter-container">
+                <label>
+                    <input type="checkbox" id="filterPPN" value="PPN"> PPN
+                </label>
+                <label>
+                    <input type="checkbox" id="filterPPH21" value="PPH21"> PPH21
+                </label>
+                <label>
+                    <input type="checkbox" id="filterPPH23" value="PPH23"> PPH23
+                </label>
+                <label>
+                    <input type="checkbox" id="filterPPH4" value="PPH4"> PPH4
+                </label>
+                <label>
+                    <input type="checkbox" id="filterSSPD" value="SSPD"> SSPD
+                </label>
+                <select id="filterBlok">
+                    <option value="">Semua Blok</option>
+                    <option value="bhp">BHP</option>
+                    <option value="bbj">BBJ</option>
+                    <option value="bjj">BJJ</option>
+                    <option value="bmm">BMM</option>
+                    <option value="bma">BMA</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Kode Rekening</th>
+                        <th>Rincian Objek</th>
+                        <th>PPN</th>
+                        <th>PPH21</th>
+                        <th>PPH23</th>
+                        <th>PPH4</th>
+                        <th>SSPD</th>
+                        <th>Blok</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                    <!-- Data akan ditampilkan di sini -->
+                </tbody>
+            </table>
+            <div id="noResults" class="no-results hidden">Tidak ada hasil yang ditemukan</div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination akan ditampilkan di sini -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Referensi Rekening Belanja Manajemen Aplikasi RKAS 2022</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
